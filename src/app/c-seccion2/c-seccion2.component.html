@@ -1,0 +1,28 @@
+<h4>{{'header.title3'| translate}}</h4>
+<div class="container">
+    <div class="col-12" >
+        <label for="filterPost">Buscador: </label>
+            <input type="text" class="forms-control" placeholder="Buscar..."[(ngModel)]="filterPost" name="filterPost"/>
+    </div>
+    
+    <div class="row">
+        <div class="col-8">
+            <table class="table table-striped">
+                <thead>
+                       <th>{{'header.image' | translate}}</th> <th>{{'header.id' | translate}}</th> <th>{{'header.name' | translate}}</th> <th>{{'header.state' | translate}}</th> <th>{{'header.race' | translate}}</th>
+                </thead>
+                <tbody>
+                    
+                    <tr *ngFor="let pj of personajes |slice:desde:hasta | filtro:filterPost"> 
+                        <td><img src="{{pj.image}}" alt=""></td><td>{{pj.id}}</td> <td>{{pj.name}} </td> <td>{{pj.status}}</td><td>{{pj.species}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <mat-paginator [length]="personajes.length"
+              [pageSize]="pageSize"
+              (page)="cambiarPagina($event)">
+</mat-paginator>
+
+        </div>
+</div>
+</div>

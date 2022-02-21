@@ -1,0 +1,21 @@
+<h4>{{'header.title2' | translate}}</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <table class="table table-striped">
+                <thead>
+                        <th>{{'header.id' | translate}}</th> <th>{{'header.name' | translate}}</th> <th>{{'header.date' | translate}}</th> <th>{{'header.episode' | translate}}</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cp of capitulos | slice:desde:hasta"> 
+                        <td>{{cp.id}}</td> <td>{{cp.name}} </td> <td>{{cp.air_date}}</td><td>{{cp.episode}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <mat-paginator [length]="capitulos.length"
+            [pageSize]="pageSize"
+            (page)="cambiarPagina($event)">
+</mat-paginator>
+        </div>
+</div>
+</div>

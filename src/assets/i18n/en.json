@@ -1,0 +1,17 @@
+{
+    "header":{
+        "title": "Rick & morty",
+        "title2":"Episode List:",
+        "title3":"Characters List:",
+        "section": "Secction",
+        "menu": "Menu",
+        "id":"ID",
+        "image":"IMAGEN",
+        "race":"RACE",
+        "state":"STATE",
+        "name":"NAME",
+        "episode":"EPISODE",
+        "date":"DATE",
+        "user": "User"
+    }
+}
